@@ -8,6 +8,7 @@ from email.MIMEText import MIMEText
 from email import Encoders
 from email.MIMEImage import MIMEImage
 import os
+#for SMS client
 import nexmo
 
 gmail_user = "#############" #Sender email address
@@ -18,6 +19,7 @@ text= 'There is some activity in your home.'
 
 sensor = 2
 
+# Set up the door sensor pin.
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(sensor, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 
@@ -75,6 +77,7 @@ def Function(x):
                 print("##########################Don't worry Door is closed back")
 
 
+#for checking state of the sensor continuosly 
 m=0
 n=0
 while True:
